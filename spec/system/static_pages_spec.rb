@@ -7,7 +7,7 @@ RSpec.describe "StaticPages", type: :system do
         visit root_path
       end
 
-      it "クックログの文字列が存在することを確認" do
+      it "レシピログの文字列が存在することを確認" do
         expect(page).to have_content 'レシピログ'
       end
 

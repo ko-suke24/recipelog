@@ -21,7 +21,7 @@ RSpec.describe "Users", type: :system do
         fill_in "パスワード", with: "password"
         fill_in "パスワード(確認)", with: "password"
         click_button "登録する"
-        expect(page).to have_content "クックログへようこそ！"
+        expect(page).to have_content "レシピログへようこそ！"
       end
       it "無効なユーザーでユーザー登録を行うとユーザー登録失敗のフラッシュが表示されること" do
         fill_in "ユーザー名", with: ""
@@ -47,11 +47,11 @@ RSpec.describe "Users", type: :system do
       it "正しいタイトルが表示されることを確認" do
         expect(page).to have_title full_title('プロフィール')
       end
-      
+
       it "ユーザー情報が表示されることを確認" do
         expect(page).to have_content user.name
         expect(page).to have_content user.introduction
-        expect(page).to have_content user.sex
+        expect(page).to have_content user.gender
       end
     end
   end

@@ -8,6 +8,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :dishes, dependent: :destroy 
 
   class << self
     # 渡された文字列のハッシュ値を返す
@@ -38,6 +39,10 @@ class User < ApplicationRecord
    # ユーザーのログイン情報を破棄する
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def feed
+    Dish.where("user_id = ?", id)
   end
 
   private

@@ -19,6 +19,7 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :favorites, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :lists, dependent: :destroy
 
   class << self
     # 渡された文字列のハッシュ値を返す
@@ -91,6 +92,21 @@ class User < ApplicationRecord
   # 現在のユーザーがお気に入り登録してたらtrueを返す
   def favorite?(dish)
     !Favorite.find_by(user_id: id, dish_id: dish.id).nil?
+  end
+
+  # 料理をリストに登録する
+  def list(dish)
+    List.create!(user_id: dish.user_id, dish_id: dish.id, from_user_id: id)
+  end
+
+  # 料理をリストから解除する
+  def unlist(list)
+    list.destroy
+  end
+
+  # 現在のユーザーがリスト登録してたらtrueを返す
+  def list?(dish)
+    !List.find_by(dish_id: dish.id, from_user_id: id).nil?
   end
 
   private

@@ -1,3 +1,6 @@
+$main-magenta: #dd356e;
+$main-yellow: #fee856;
+
 // ミックスイン
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -21,6 +24,22 @@
     height: auto;
     box-sizing: border-box;
   }
+}
+
+// スマホ用：ヘッダーメニューが横棒三本になるところを境にロゴを拡大
+@media screen and (max-width: 768px) {
+  #logo {
+    img {
+      max-width: 400%;
+      height: auto;
+      box-sizing: border-box;
+    }
+  }
+}
+
+// スマホ閲覧時、横棒三本をページ上部に固定
+.fh5co-nav-toggle {
+  position: fixed;
 }
 
 // ロゴの上下位置調整
@@ -188,6 +207,16 @@ span.picture {
 // 「新しい料理を作る」ボタン
 .btn-record {
   margin-top: 3em;
+  color: black;
+  background-color: $main-yellow;
+  border-color: $main-yellow;
+}
+
+// 「CSV出力」ボタン
+.btn-csv {
+  color: black;
+  background-color: palegreen;
+  border-color: palegreen;
 }
 
 // 料理一覧

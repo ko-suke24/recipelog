@@ -23,7 +23,6 @@ gem 'ransack'
 
 group :production do
   gem 'unicorn', '5.4.1'
-  gem 'fog', '1.42'
 end
 
 group :development, :test do

@@ -1,11 +1,12 @@
-include ApplicationHelper
+include ApplicationHelper # full_titleメソッドの読み込み
 
 def is_logged_in?
- !session[:user_id].nil?
+  !session[:user_id].nil?
 end
 
 def login_for_request(user)
-  post login_path, params: { session: { email: user.email, password: user.password } }
+  post login_path, params: { session: { email: user.email,
+                                        password: user.password } }
 end
 
 def login_for_system(user)

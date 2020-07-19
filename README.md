@@ -29,7 +29,7 @@
 - MySQL
 - JQuery
 - Rspec, Rubocop
-
+- Docker
 - Capistrano
 - AWS
 

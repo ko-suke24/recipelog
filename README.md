@@ -29,6 +29,7 @@
 - MySQL
 - JQuery
 - Rspec, Rubocop
+
 - Capistrano
 - AWS
 

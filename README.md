@@ -9,11 +9,6 @@
 - Capistranoを利用した**自動デプロイ**
 - **Docker**を用いた開発環境構築
 
-# 今後実装したい機能
-- カテゴリ検索機能
-- 画像の複数投稿
-- CircleCIによる自動ビルド&テスト
-
 # 開発環境
 - Ruby 2.5.1, Rails 5.2.4
 - Nginx, unicorn, Puma

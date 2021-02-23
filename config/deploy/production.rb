@@ -1,1 +1,1 @@
-server '54.248.173.225', user: 'ec2-user', roles: %w{app db web}
+server 'https://www.recipelog.net', user: 'ec2-user', roles: %w{app db web}

@@ -15,17 +15,17 @@
 
 # 開発環境
 
-■ フレームワーク  
- Rails5.2.4  
-■ インフラ  
- AWS EC2, Docker  
-■ データベース  
- AWS RDS, MySQL  
-■ アプリケーションサーバー  
- Unicorn  
-■Web サーバー  
- Nginx
-
+■フレームワーク  
+　Rails5.2.4  
+■インフラ  
+　AWS EC2, Docker  
+■データベース  
+　AWS RDS, MySQL  
+■アプリケーションサーバー  
+　Unicorn  
+■Webサーバー  
+　Nginx
+ 
 # アプリケーションの機能
 
 - 作った料理を投稿
